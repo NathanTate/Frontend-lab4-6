@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+}
+
+.container {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    margin-inline: auto;
+    height: 90vh;
+    background: linear-gradient(45deg, rgb(77, 77, 248), rgb(252, 50, 50));
+    max-width: 1300px;
+    margin-top: 5vh;
+    padding: 2rem 10rem;
+    border-radius: 1.25rem;
+    overflow-y: auto;
+}
+
+label {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+select, input {
+    padding: 0.5rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    margin: 0.5rem;
+    margin-left: 0;
+}
+
+select:focus, input:focus {
+    outline: none;
+    transform: scale(1.05);
+}
+
+input:not([type="radio"]):not([type='checkbox']) {
+    width: 100%;
+}
+
+.form-group:not(:first-child) {
+    margin-block: 1rem;
+}
+
+.inline-label label {
+    display: inline-block;
+}
+
+.btn {
+    padding: 0.5em 1em;
+    border-radius: 9999px;
+    border: none;
+    font-weight: bold;
+    display: block;
+}
+
+button {
+    font-size: 1.25rem;
+    margin-inline: auto;
+    width: 100%;
+}
+
+ul > li {
+    font-size: 1.25rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding: 1rem;
+}
+
+
+@media (max-width: 800px) {
+    .container{
+        grid-template-columns: auto;
+    }
+}

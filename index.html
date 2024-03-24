@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <form id="primary-form">
+          <div class="form-group">
+            <label for="name">Ваше ім'я</label>
+            <input type="text" name="name" />
+          </div>
+          <div class="form-group">
+            <label for="faculty">Select faculty</label>
+            <select name="faculty" id="faculty">
+              <option value="Філософський факультет">
+                Філософський факультет
+              </option>
+              <option value="Історичний факультет">Історичний факультет</option>
+              <option value="Факультет журналістики">
+                Факультет журналістики
+              </option>
+              <option value="Факультет прикладної математики та інформатики">
+                Факультет прикладної математики та інформатики
+              </option>
+              <option value="Факультет фізики">Факультет фізики</option>
+              <option value="Біологічний факультет">
+                Біологічний факультет
+              </option>
+              <option value="Хімічний факультет">Хімічний факультет</option>
+              <option value="Географічний факультет">
+                Географічний факультет
+              </option>
+              <option value="Факультет економіки">Факультет економіки</option>
+              <option value="Факультет міжнародних відносин">
+                Факультет міжнародних відносин
+              </option>
+            </select>
+          </div>
+          <div class="inline-label form-group">
+            <div>
+              <input type="radio" name="thread" value="ФЕІ" />
+              <label for="thread">ФЕІ</label>
+            </div>
+            <div>
+              <input type="radio" name="thread" value="ФЕП" />
+              <label for="thread">ФЕП</label>
+            </div>
+            <div>
+              <input type="radio" name="thread" value="ФЕС" />
+              <label for="thread">ФЕС</label>
+            </div>
+          </div>
+          <div class="inline-label form-group">
+            <div>
+              <input type="checkbox" name="fei-23" value="ФЕІ-23" />
+              <label for="ФЕІ-23">ФЕІ-23</label>
+            </div>
+            <div>
+              <input type="checkbox" name="group" value="ФЕП-23" />
+              <label for="ФЕП-23">ФЕП-23</label>
+            </div>
+            <div>
+              <input type="checkbox" name="group" value="ФЕС-23" />
+              <label for="ФЕС-23">ФЕС-23</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="date">Дана співбесіди</label>
+            <input
+              type="date"
+              name="date"
+              value="2024-03-18"
+              min="2024-01-01"
+            />
+          </div>
+          <div class="form-group">
+            <label for="score">Середній бал</label>
+            <input type="number" name="score" min="0" max="100" />
+          </div>
+          <div class="form-group">
+            <label for="car">Машина мрії</label>
+            <input list="car-list" name="car" />
+            <datalist id="car-list">
+              <option value="Koenigsegg Gemera"></option>
+              <option value="Porsche Spider 918"></option>
+              <option value="Mclaren F1"></option>
+              <option value="Bugatti Chiron"></option>
+              <option value="Nissan GTR R35"></option>
+              <option value="Koenigsegg Agera R"></option>
+            </datalist>
+          </div>
+          <div class="form-group">
+            <label for="month">Улюблений місяць</label>
+            <input type="month" name="month" value="2024-03" />
+          </div>
+          <div class="form-group">
+            <label for="phone-nubmer">
+              Номер телефону
+              <br />
+              <small>Формат: 098-374-6548</small>
+            </label>
+            <input
+              type="tel"
+              name="phone-number"
+              pattern="^[0-9]{3}-[0-9]{3}-[0-9]{4}$"
+            />
+          </div>
+          <button class="btn" type="submit">Submit</button>
+        </form>
+        <div>
+          <div class="filters">
+            <div>
+              <label for="faculty">По факультету</label>
+              <input type="text" class="filter-input" name="faculty" />
+            </div>
+            <div>
+              <label for="date">По даті співбесіди</label>
+              <input type="text" class="filter-input" name="date" />
+            </div>
+            <div>
+              <label for="score">По середньому балу</label>
+              <input type="text" class="filter-input" name="score" />
+              <button class="btn filter-btn">Фільтрувати</button>
+            </div>
+          </div>
+          <div>
+            <ul class="result"></ul>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
